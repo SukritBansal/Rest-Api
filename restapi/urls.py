@@ -22,8 +22,8 @@ from fishdata import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('fish/', views.fishList.as_view()),
+    path('fish/', views.fishList.as_view(),name='fish'),
 ]
 
 if settings.DEBUG:
-  urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+    urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
